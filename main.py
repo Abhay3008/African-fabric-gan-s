@@ -11,14 +11,14 @@ from keras.layers import Conv2D,Dropout,Dense,Flatten,Conv2DTranspose,BatchNorma
 import tensorflow as tf
 
 # Creating a list to store all images.
-path_celeb = []
+path_img = []
 # set train_path to your path to directory of all images.
-train_path_celeb = "/content/train/africa_fabric/africa_fabric/"
-for path in os.listdir(train_path_celeb):
+train_path_img = "/content/train/africa_fabric/africa_fabric/"
+for path in os.listdir(train_path_img):
     if '.jpg' in path:
-        path_celeb.append(os.path.join(train_path_celeb, path))
+        path_img.append(os.path.join(train_path_img, path))
         
-new_path=path_celeb[0:2000]
+new_path=path_img[0:2000]
 
 # Cropping all images to set them of one size
 
